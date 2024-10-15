@@ -66,7 +66,7 @@
 		<img src="pics/main2.jpg" height="400" width="850">
 	</p>
 	</body>
-		<p style="text-align: center;" >
+		<p style="text-align: left;" >
 			<b>Figure 1.</b> An overview of the proposed flow-matching model Fox-TTS. The symbol "P" represents the mean pooling operation. The flow-based denoiser is subject to conditioning in two distinct yet complementary ways: First, it temporally interfaces with the phoneme sequences via a cross-attention mechanism, ensuring that the temporal dynamics of the input text are effectively captured. Second, it gets the global conditional signals through adaptive layer normalization (AdaLN), in which all the external conditions are fused.
 		</p>
 </div>
@@ -91,17 +91,32 @@
 				</thead>
 				<tbody>
 					<tr>
-					<td style="vertical-align : middle;text-align:center;" rowspan="2">Cartoon</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/CT_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_1__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>以大德铸魂、公德善心、品德润身，就能激发出更多向上向善的力量。</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_2__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>最近爆火的开端也是他们的剧呢。</td>
-						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_3__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>换成等量的牌，搭配一些存牌的人物，牌会越来越多。</td>
+						<td style="vertical-align : middle;text-align:center;" rowspan="2">Role-Playing</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/RP_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_2__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>今晚是欢迎我的，我们只管喝酒，谁要再胡说八道，再搞内讧，我建议劝其退出中闲委。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_1__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>特别是早晨，跑出门，首先看到的就是天高云淡的晴空。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_3__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>我现在一肚子火，喝水有什么用。</td>
+							
+						</tr>
+						<tr>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/RP_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_1__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>当即气死了白家老爷子，没了支撑，那些人才有机可乘，如今竟被他三言两语一笔带过。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_2__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>可南府是本侯的家，你诬陷南府，就是诬陷本侯。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_3__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>岂止是不感兴趣，说是厌恶都不为过。</td>
 					</tr>
+
 					<tr>
+					<td style="vertical-align : middle;text-align:center;" rowspan="2">Cartoon</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/CT_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_1__CT_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>现在都报警了，她这也没有必要做什么了。</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_2__CT_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>我就不认识了，你百度一下，我看剧不记演员的。</td>
 						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_3__CT_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>此书登上了纽约时报畅销榜的首位。</td>
+					</tr>
+					<tr>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/CT_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_1__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>以大德铸魂、公德善心、品德润身，就能激发出更多向上向善的力量。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_2__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>最近爆火的开端也是他们的剧呢。</td>
+						<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Cartoon_samples/Sample_3__CT_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>换成等量的牌，搭配一些存牌的人物，牌会越来越多。</td>
 					</tr>
 
 					<tr>
@@ -118,19 +133,7 @@
 							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Styilzed_samples/Sample_3__ST_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>上述证据相互印证，被告人于某某无异议。</td>
 					</tr>
 
-					<tr>
-						<td style="vertical-align : middle;text-align:center;" rowspan="2">Role-Playing</td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/RP_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_1__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>当即气死了白家老爷子，没了支撑，那些人才有机可乘，如今竟被他三言两语一笔带过。</td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_2__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>可南府是本侯的家，你诬陷南府，就是诬陷本侯。</td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_3__RP_1.wav" autoplay/>Your browser does not support the audio element.</audio><br>岂止是不感兴趣，说是厌恶都不为过。</td>
-						</tr>
-						<tr>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Prompts/RP_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_1__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>特别是早晨，跑出门，首先看到的就是天高云淡的晴空。</td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_2__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>今晚是欢迎我的，我们只管喝酒，谁要再胡说八道，再搞内讧，我建议劝其退出中闲委。</td>
-							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 190px;"><source src="audios/Role-Playing_samples/Sample_3__RP_2.wav" autoplay/>Your browser does not support the audio element.</audio><br>我现在一肚子火，喝水有什么用。</td>
-					</tr>
+
 
 					<tr>
 						<td style="vertical-align : middle;text-align:center;" rowspan="2">Outdoor Interview</td>
