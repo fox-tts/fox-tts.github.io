@@ -42,18 +42,14 @@
 	<p><b>Abstract.</b> Expressive zero-shot text-to-speech (TTS) synthesis aims at synthesizing high-fidelity speech that closely mimics a brief stylized recording without additional training. Despite the advancements in this area, several challenges persist: 1) Current methods, which encompass implicit prompt engineering through in-context learning or by using pre-trained speaker identification models, often struggle to fully capture the acoustic characteristics of the stylized speaker; 2) Attaining high-fidelity voice cloning for a stylized speaker typically requires large amounts of specific data for fine-tuning; 3) There is no benchmark tailored for the expressive zero-shot TTS scenarios. To address them, we present <i><b>Fox-TTS</b></i>, a family of large-scale models for high-quality expressive zero-shot TTS. We introduce an improved flow-matching Transformer model coupled with a novel learnable speaker encoder. Within the speaker encoder, we incorporate three key designs: temporal mean pooling, temporal data augmentation, and an information bottleneck used for trading off pronunciation stability and speaker similarity in an explainable manner. Moreover, we have collected <i><b>Fox-eval</b></i>, the first multi-speaker, multi-style benchmark that is specially designed for expressive zero-shot scenarios. Extensive experiments show that Fox-TTS achieves on-par quality with human recordings in normal scenarios and state-of-the-art performance in expressive scenarios.
 	</p>
 
-	<!-- <p>
+	<p>
 	<b>Contents</b>
       <ul>
-        <li><a href="#model-overview">System Overview</a></li>
-        <li><a href="#zero-shot-icl-samples">Zero-shot In-context Learning</a></li>
-        <li><a href="#speaker-finetune-samples">Speaker Fine-tune</a></li>
-        <li><a href="#speech-factorization-samples">Speech Factorization</a></li>
-        <li><a href="#rl-samples">Preference Biasing Through Reinforcement Learning</a></li>
-        <li><a href="#full-diffusion-samples">Fully Diffusion-based Speech Generation</a></li>
-        <li><a href="#applications-samples">Applications</a></li>
+        <li><a href="#model-overview">Model Overview</a></li>
+        <li><a href="#samples">Expressive Zero-Shot TTS on <i><b>Fox-eval</b></i></a></li>
+        <li><a href="#speed">Dynamic Speed Control</a></li>
       </ul>
-	</p> -->
+	</p>
 
 	
 </div>
@@ -238,4 +234,65 @@
 			</table>
 		</div>
 	<br>
-	
+
+	<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+		<h2 id="speed" style="text-align: center;">Dynamic Speed Control</h2>
+		<br>
+		<!-- <h5 id="description" style="text-align: left;"><i><b>Fox-eval</b></i>: The first multi-speaker, multi-style benchmark tailored for expressive zero-shot TTS.</h4>
+		<br> -->
+			<div class="table-responsive pt-3">
+				<table class="table table-hover pt-2">
+					<thead>
+					<tr>
+					<!-- <th style="text-align: center">Speaker Domain</th> -->
+					<th style="text-align: center">Prompt</th>
+					<th style="text-align: center">Text</th>
+					<th style="text-align: center">0.5x Duraiton</th>
+					<th style="text-align: center">0.7x Duraiton</th>
+					<th style="text-align: center">1.0x Duraiton</th>
+					<th style="text-align: center">1.3x Duration</th>
+					<th style="text-align: center">1.5x Duration</th>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/prompt/prompt_1.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;">父母都是爱你的，只是方式不对罢了。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.5speed/sample_1.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.7speed/sample_1.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1speed/sample_1.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.3speed/sample_1.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.5speed/sample_1.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						</tr>
+						<tr>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/prompt/prompt_2.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;">双方有异议的证据有:原告出具的护理费证明。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.5speed/sample_2.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.7speed/sample_2.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1speed/sample_2.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.3speed/sample_2.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.5speed/sample_2.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						</tr>
+						<tr>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/prompt/prompt_3.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;">当事人应当按照约定履行自己的义务，不得擅自变更或者解除合同。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.5speed/sample_3.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.7speed/sample_3.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1speed/sample_3.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.3speed/sample_3.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.5speed/sample_3.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						</tr>
+						<tr>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/prompt/prompt_4.wav" autoplay/>Your browser does not support the audio element.</audio></td>
+							<td style="vertical-align : middle;text-align:center;">可以说，股权将格力与京海互联深度绑定。</td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.5speed/sample_4.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/0.7speed/sample_4.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1speed/sample_4.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.3speed/sample_4.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+							<td style="vertical-align : middle;text-align:center;"><audio controls="controls" style="width: 140px;"><source src="speed/1.5speed/sample_4.wav" autoplay/>Your browser does not support the audio element.</audio><br></td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		<br>
