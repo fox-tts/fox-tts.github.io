@@ -26,20 +26,19 @@
 
 <div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
 	<div class="text-center">
-	<h2>Fox-TTS: </h2>
-      <h3>Scalable Flow Transformers for Expressive Zero-Shot Text to Speech</h3>
+      <h3>Chunked Flow Matching for Streaming Text-to-Speech Synthesis</h3>
       <!-- [<a href="https://arxiv.org/abs/2406.02430">Paper</a>] -->
 		<!-- [<a href="https://arxiv.org/abs/2303.03926">Paper</a>] -->
 		<!-- [<a href="https://arxiv.org/abs/2306.02982">Paper</a>] -->
 
         <p class="fst-italic mb-0">
         	<br>
-          ICLR 2025 Submission
+          Anonymous Submission
       <p></p>
         </p>
         <!-- <p><b>ByteDance</b></p> -->
 	</div>
-	<p><b>Abstract.</b> Expressive zero-shot text-to-speech (TTS) synthesis aims at synthesizing high-fidelity speech that closely mimics a brief stylized recording without additional training. Despite the advancements in this area, several challenges persist: 1) Current methods, which encompass implicit prompt engineering through in-context learning or by using pre-trained speaker identification models, often struggle to fully capture the acoustic characteristics of the stylized speaker; 2) Attaining high-fidelity voice cloning for a stylized speaker typically requires large amounts of specific data for fine-tuning; 3) There is no benchmark tailored for the expressive zero-shot TTS scenarios. To address them, we present <i><b>Fox-TTS</b></i>, a family of large-scale models for high-quality expressive zero-shot TTS. We introduce an improved flow-matching Transformer model coupled with a novel learnable speaker encoder. Within the speaker encoder, we incorporate three key designs: temporal mean pooling, temporal data augmentation, and an information bottleneck used for trading off pronunciation stability and speaker similarity in an explainable manner. Moreover, we have collected <i><b>Fox-eval</b></i>, the first multi-speaker, multi-style benchmark that is specially designed for expressive zero-shot scenarios. Extensive experiments show that Fox-TTS achieves on-par quality with human recordings in normal scenarios and state-of-the-art performance in expressive scenarios.
+	<p><b>Abstract.</b> By incorporating large language models (LLMs) and non-autoregressive (NAR) decoders, existing zero-shot text-to-speech (TTS) systems are able to generate natural and human-like speech. However, these large systems are usually time-consuming, and the NAR part is rarely explored. In this paper, we investigate the design space of NAR models for two-stage TTS systems and propose a chunked flow matching model. Our NAR model 1) faithfully fulfills the acoustic characteristics (e.g., timbre, accent) for the LLM outputs; 2) supports streaming inference with constant costs for each inference chunk and minimal performance drop; 3) can be seamlessly adapted to the single-stage NAR-only TTS system. Experiments show that our model not only significantly improves the two-stage TTS system and achieves $\textless$ 150ms first-packet delay for streaming inference but also yields competitive performance on the single-stage NAR TTS system.
 	</p>
 
 	<p>
